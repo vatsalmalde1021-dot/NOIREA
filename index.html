@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA — Luxury Fragrances</title>
+  
+  <!-- Google Fonts & FontAwesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">AURA</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#shop">Collection</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-icon-btn" id="cartIconBtn" aria-label="Open Shopping Cart">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-badge" id="cartCount">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="hero-subtitle">Essence of Elegance</p>
+      <h1 class="hero-title">Uncover Your Signature Scent</h1>
+      <p class="hero-description">Explore our curated collection of rare, artisanal fragrances crafted to leave an unforgettable impression.</p>
+      <a href="#shop" class="btn-gold">Explore Collection</a>
+    </div>
+  </section>
+
+  <!-- STORE SECTION -->
+  <section class="store-container" id="shop">
+    <h2 class="section-title">The Collection</h2>
+    <p class="section-subtitle">Handcrafted perfumes made with rare global ingredients</p>
+
+    <!-- Controls (Search & Filters) -->
+    <div class="controls-bar">
+      <div class="filter-group">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="woody">Woody</button>
+        <button class="filter-btn" data-filter="floral">Floral</button>
+        <button class="filter-btn" data-filter="oriental">Oriental</button>
+        <button class="filter-btn" data-filter="fresh">Fresh</button>
+      </div>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Search fragrances..." />
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid" id="productGrid">
+      <!-- Products dynamically injected by JavaScript -->
+    </div>
+  </section>
+
+  <!-- SHOPPING CART SIDEBAR -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Selection</h3>
+      <button class="close-cart-btn" id="closeCartBtn">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <!-- Cart Items dynamically injected -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotalAmount">$0.00</span>
+      </div>
+      <button class="checkout-btn" onclick="alert('Proceeding to secure checkout!')">Checkout Now</button>
+    </div>
+  </aside>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMsg">Item added to cart</span>
+  </div>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
